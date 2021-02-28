@@ -1,0 +1,55 @@
+/*Style for Circular button in menu item*/
+/*.circlebut { 
+    width: 30px; 
+    height: 30px;
+    padding-top: auto;
+    padding-bottom: auto;
+    border-radius: 15px;
+    font-size: 15px; 
+    text-align: center;
+} */
+
+
+/*Style for Incrementor buttons in menu item*/
+.qty {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+
+input.addQty,input.minusQty{ 
+    width:25px;
+    height:30px;
+    text-justify: auto;
+}
+
+/*Style for Text area in menu item*/
+
+.remarks{
+    width: 100%;
+    height:50px;
+}    
+
+
+@media only screen and (max-width: 767px){
+    .remarks{
+        width: 96%;
+        height:48px;
+    }
+}
+
+
+/*Style for the two buttons; "View Cart" and "Search"*/
+button{
+    width:100%;
+}
+
+/*Style for add to Cart button*/
+#addToCartBtn{
+    width:30%;
+}
+
+/*Style for Shopping Cart*/
+.cartInput{
+    width:100%;
+}

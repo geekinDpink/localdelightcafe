@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2196f3">
+
+  <!--Bootstrap Version 4.5.3-->
+  <!--CSS for Bootstrap, follow by Overlay (all pages) and lastly, for specific page (if any)-->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/overlay.css">
+  <link rel="stylesheet" href="/bootstrap/css/about.css">
+  	<!--PWA-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./img/homeicon192.png">
+
+
+  <!-- Bootstrap JavaScript -->
+  <script src="./jquery/jquery-3.5.1.js"></script>
+  <script src="./popper/popper.min.js"></script>
+  <script src='./bootstrap/js/bootstrap.min.js'></script>
+  <script src='./bootstrap/js/about.js'></script>
+  <script src='./bootstrap/js/app.js'></script>
+  <script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcCr-Z-g74a-HOmoiBu83mZBRYa59IOv4&callback=initMap">
+  </script>
+  <title>Local Delight Cafe</title>
+</head>
+
+<body>
+  <!--Horizontal Nav Bar-->
+  <!--Require navbar-light-->
+  <!--Cafe name will be 2-liner Tablet/PC view and single line in mobile device-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <h3 class="navbar-brand">Local <br class="d-none d-md-inline">Delight Cafe</h3>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarContent"
+      aria-controls="navBarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!--navbar-light required because for CSS selector for bg imag, 
+              the navbar-toggler-icon is a descendant of navbar-light-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navBarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="delivery.html">Menu/Delivery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dinein.html">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+      </ul>
+
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--Header-->
+  <header class="container-fluid">
+    <img src="img/pagebanner.jpg" id="top_header" class="mx-auto d-block img-fluid">
+    </img>
+  </header>
+
+
+  <div class="container">
+
+    <section class="content">
+      <div class="jumbotron">
+        <h2>About Local Delight Cafe</h2>
+        <p>From its humble beginnings as a modest coffee stall in the 1980s,
+          the name of Local Delight Cafe has become synonymous with unparalleled local delights and
+          irresistibly fragrant coffee and tea, enjoyed amidst a cosy atmosphere.
+          Today, Local Delights continues to delight fans and to attract converts. </p><br>
+
+        <h2>Vision</h2>
+        <p>To establish Local Delight Cafe as a household name in Singapore and Asia,
+          offering delectable local cruisine and other complementary traditional dessert and beverages to one and all.
+        </p><br>
+
+        <h2>Mission</h2>
+        <p>Local Delights strive to preserve its unique & rich heritage and pursue its excellence in its food and
+          customer service.
+        </p>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>What our Customers say!</h2>
+      <figure class="figure">
+        <img src="img/cust1.jpg" alt="Ruby" class="img-fluid float-right rounded-circle small_img">
+        <figcaption class="figure-caption">
+          <blockquote class="blockquote">
+            I chanced upon this shop near my workplace and have been frequently it for lunch. The food are authentic
+            and value for money.
+            <footer class="blockquote-footer">Ruby Chan</footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="img/cust2.jpg" alt="Jack" class="img-fluid float-left rounded small_img">
+        <figcaption class="figure-caption">
+          <blockquote class="blockquote text-right">
+            The staffs are very polite and caring, together with the cosy cafe setting, makes the dining
+            experience feels like eating at one home. My favourite dish is the Nasi Lemak. The rice is fragrant and
+            brimming with cooconut and pandan leave aroma. The chicken drumstick is well marinated and cooked to
+            perfection,
+            every fiber is brimming with flavour and chewiness.
+            <footer class="blockquote-footer">Jack Neo</footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="img/cust3.jpg" alt="Alice" class="img-fluid float-right rounded-circle small_img">
+        <figcaption class="figure-caption">
+          <blockquote class="blockquote">
+            The wanton noodles is a must have! The wanton are fried to perfection, every mouthful resonate with
+            cripiness and the char siew is
+            braised to perfection. Avoid lunch period if you do not like to queue, their food delivery services is a
+            good alternative. The delivery lead time is
+            pretty reasonable, from 15 mins to 40 mins.
+            <footer class="blockquote-footer">Alice Tan</footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="img/cust4.jpg" alt="Sarah" class="img-fluid float-left rounded small_img">
+        <figcaption class="figure-caption">
+          <blockquote class="blockquote text-right">
+            True to its name, the cafe serves a wide array of delicious local delights! You can expect to find not only
+            chinese, malay and indian, but also other international cruisine.
+            <footer class="blockquote-footer">Sarah Loh</footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="figure">
+        <img src="img/cust5.jpg" alt="Evan" class="img-fluid float-right rounded-circle small_img">
+        <figcaption class="figure-caption">
+          <blockquote class="blockquote">
+            One of the most condusive place to have a family gathering. The staff is friendly and very attentive to our
+            needs.
+            The wide variety of dishes can surely cater to even the most fussiest eater in my family.
+            <footer class="blockquote-footer">Evan Chen</footer>
+          </blockquote>
+        </figcaption>
+      </figure>
+
+
+
+
+
+    </section>
+
+    <section class="content">
+      <h2>Our Stores</h2>
+      <div id="map2"></div>
+    </section>
+  </div>
+
+  <!--Footer with 3 columns, -->
+  <footer class="footer bg-dark">
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <!--Col 1: Name and address-->
+        <div class="col-md-4 justify-content-start">
+          <h4>Local Delight Cafe</h4>
+            <p>
+              Headquarter:<br>
+              10 Orchard Drive<br>
+              The Hive, #02-05<br>
+              Singapore 123456 <br>
+            </p>
+        </div>
+
+        <!--Col 2:Social Media-->
+        <div class="col-md-4 justify-content-start mb-3">
+          <h4>Follow us on:</h4>
+          <img src="img/facebook.jpg" alt="Facebook">
+          <img src="img/instagram.png" alt="Instagram">
+          <img src="img/twitter.jpg" alt="Twitter">
+          <img src="img/youtube.jpg" alt="Youtube">
+          <img src="img/rss.jpg" alt="RSS"> <br>
+        </div>
+
+        <!--Col 3: Other links-->
+        <div class="col-md-4 justify-content-center mb-3">
+          <h4>Other links:</h4>
+          <ul>
+            <li><a href="dinein.html" id="footerLink">Store Finder</a></li>
+            <li><a href="#" id="footerLink">Careers</a></li>
+            <li><a href="#" id="footerLink">Terms and Conditions</a></li>
+            <li><a href="#" id="footerLink">Privacy Policy</a></li>
+            <li><a href="#" id="footerLink">Press Release</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!--AIzaSyBcCr-Z-g74a-HOmoiBu83mZBRYa59IOv4-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2196f3">
+
+  <!--Bootstrap Version 4.5.3-->
+  <!--CSS for Bootstrap, follow by Overlay (all pages) and lastly, for specific page (if any)-->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/overlay.css">
+  <link rel="stylesheet" href="/bootstrap/css/dinein.css">
+  	<!--PWA-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./img/homeicon192.png">
+
+
+  <!-- Bootstrap JavaScript -->
+  <script src="./jquery/jquery-3.5.1.js"></script>
+  <script src="./popper/popper.min.js"></script>
+  <script src='./bootstrap/js/bootstrap.min.js'></script>
+  <script src='./bootstrap/js/dinein.js'></script>
+  <script src='./bootstrap/js/app.js'></script>
+
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcCr-Z-g74a-HOmoiBu83mZBRYa59IOv4&callback=initMap">
+    </script>
+  <title>Local Delight Cafe</title>
+</head>
+
+<body>
+  <!--Horizontal Nav Bar-->
+  <!--Require navbar-light-->
+  <!--Cafe name will be 2-liner Tablet/PC view and single line in mobile device-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <h3 class="navbar-brand">Local <br class="d-none d-md-inline">Delight Cafe</h3>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarContent"
+      aria-controls="navBarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!--navbar-light required because for CSS selector for bg imag, 
+              the navbar-toggler-icon is a descendant of navbar-light-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navBarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item active"><a class="nav-link" href="delivery.html">Menu/Delivery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dinein.html">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+      </ul>
+
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--Header-->
+  <header class="container-fluid">
+    <img src="img/pagebanner.jpg" id="top_header" class="mx-auto d-block img-fluid">
+    </img>
+  </header>
+
+  <!--Booking/Reservation Form for dine-in-->
+  <div class="container">
+    <div class="section">
+      <h2>Reservation</h2>
+      <div class="container-fluid">
+        <form action="#" method="post">
+
+          <div class="form-group row">
+            <label for="outlet" class="col-sm-2 col-form-label">Outlet</label>
+            <div class="col-sm-10">
+              <select class="custom-select">
+                <option selected>Please select Outlet</option>
+                <option value="Orchard">Orchard</option>
+                <option value="Tampines">Tampines</option>
+                <option value="Westgate">Westgate</option>
+                <option value="Woodsland">Woodsland</option>
+                <option value="Vivo">Vivo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="contactNo" class="col-sm-2 col-form-label">Contact Number</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="contactNo" placeholder="Contact Number" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="dineinDate" class="col-sm-2 col-form-label">Date of Dining</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="dineinDate" placeholder="Date" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="pax" class="col-sm-2 col-form-label">Number of Pax</label>
+            <div class="col-sm-10">
+              <select class="custom-select">
+                <option selected>Please indicate the no of pax</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8 [Max for Safe Distancing Measure]</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-primary" onclick="location.href='success.html'">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <!--Map that facilitate customers to getting to one of the outlet from MRT station-->
+    <div class="section">
+      <h2>Getting There</h2>
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-2">Mrt</div>
+          <select id="mrt" class="col-sm-8">
+            <option value="1.3004775997820923, 103.83838662320868">Sommerset Station</option>
+            <option value="1.3544343506982064, 103.94329249622585">Tampines Station</option>
+            <option value="1.3332647286937525, 103.74225719622588">Jurong East Station</option>
+            <option value="1.4370569074477961, 103.78614541569803">Woodsland Station</option>
+            <option value="1.2654103515252624, 103.82051389622612">HabourFront Station</option>
+          </select>
+        </div>
+
+
+        <div class="row mb-2">
+          <div class="col-sm-2">Our Outlet</div>
+          <select id="outlet" class="col-sm-8">
+            <option value="1.3022795792881634, 103.83958825286538">The Centrepoint</option>
+            <option value="1.3573580117563, 103.94725245922837">Tampines North CC</option>
+            <option value="1.3348368508847166, 103.74681803855349">IMM</option>
+            <option value="1.4431908978679582, 103.79217404129508">Woodlands North Plaza</option>
+            <option value="1.254024025903818, 103.82380706594104">Sentosa</option>
+          </select>
+        </div>
+
+
+        <div class="row">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Footer with 3 columns, -->
+  <footer class="footer bg-dark">
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <!--Col 1: Name and address-->
+        <div class="col-md-4 justify-content-start">
+          <h4>Local Delight Cafe</h4>
+          <p>
+            Headquarter:<br>
+            10 Orchard Drive<br>
+            The Hive, #02-05<br>
+            Singapore 123456 <br>
+          </p>
+        </div>
+
+        <!--Col 2:Social Media-->
+        <div class="col-md-4 justify-content-start mb-3">
+          <h4>Follow us on:</h4>
+          <img src="img/facebook.jpg" alt="Facebook">
+          <img src="img/instagram.png" alt="Instagram">
+          <img src="img/twitter.jpg" alt="Twitter">
+          <img src="img/youtube.jpg" alt="Youtube">
+          <img src="img/rss.jpg" alt="RSS"> <br>
+        </div>
+
+        <!--Col 3: Other links-->
+        <div class="col-md-4 justify-content-center mb-3">
+          <h4>Other links:</h4>
+          <ul>
+            <li><a href="dinein.html" id="footerLink">Store Finder</a></li>
+            <li><a href="#" id="footerLink">Careers</a></li>
+            <li><a href="#" id="footerLink">Terms and Conditions</a></li>
+            <li><a href="#" id="footerLink">Privacy Policy</a></li>
+            <li><a href="#" id="footerLink">Press Release</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

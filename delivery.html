@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2196f3">
+
+  <!--Bootstrap Version 4.5.3-->
+  <!--CSS for Bootstrap, follow by Overlay (all pages) and lastly, for specific page (if any)-->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/overlay.css">
+  <link rel="stylesheet" href="/bootstrap/css/delivery.css">
+  <!--PWA-->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="./img/homeicon192.png">
+
+
+  <!-- Bootstrap JavaScript -->
+  <script src="./jquery/jquery-3.5.1.js"></script>
+  <script src="./popper/popper.min.js"></script>
+  <script src='./bootstrap/js/bootstrap.min.js'></script>
+  <script src='./bootstrap/js/delivery.js'></script>
+  <script src='./bootstrap/js/app.js'></script>
+
+
+  <title>Local Delight Cafe</title>
+</head>
+
+<body>
+  <!--Horizontal Nav Bar-->
+  <!--Require navbar-light-->
+  <!--Cafe name will be 2-liner Tablet/PC view and single line in mobile device-->
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <h3 class="navbar-brand">Local <br class="d-none d-md-inline">Delight Cafe</h3>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarContent"
+      aria-controls="navBarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!--navbar-light required because for CSS selector for bg imag, 
+              the navbar-toggler-icon is a descendant of navbar-light-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navBarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item active"><a class="nav-link" href="delivery.html">Menu/Delivery</a></li>
+        <li class="nav-item"><a class="nav-link" href="dinein.html">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+      </ul>
+
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--Header-->
+  <header class="container-fluid">
+    <img src="img/pagebanner.jpg" id="top_header" class="mx-auto d-block img-fluid">
+    </img>
+  </header>
+
+
+  <div class="container">
+    <section class="content">
+      <h2>Online Delivery and Menu</h2>
+      <p>Feel free to browse through the cruisines,
+        from local to international, served in our humble abode. <br>
+        You may select the check-boxes, and click on the "Search" button, to speed up your search.
+        For online delivery, under the food item, key in the quantity and preferences in the remarks column.
+        Once you have complete ordering, click on the "Add to Cart" button below.
+        After which, you may proceed to view the items in your carts and make payment
+        by clicking on the "View Cart/Pay" button.
+      </p>
+    </section>
+
+    <!--Main container 2:10 cols-->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+
+          <!--Filter Col, 2 Grid-space wide-->
+          <div class="col-md-2 mt-3">
+            <h4>Type of Food</h4>
+            <form class="menuFilterForm">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="drink" name="drink" value="drink" checked>
+                <label class="custom-control-label" for="drink">Drink</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="appetiser" name="appetiser" value="appetiser"
+                  checked>
+                <label class="custom-control-label" for="appetiser">Appetiser</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="mainCourse" name="mainCourse" value="mainCourse"
+                  checked>
+                <label class="custom-control-label" for="mainCourse">Main</label>
+              </div>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="dessert" name="dessert" value="dessert" checked>
+                <label class="custom-control-label" for="dessert">Dessert</label>
+              </div>
+
+            </form>
+
+            <!--Search button, Show menu items based on checkboxes that are ticked.-->
+            <button class="btn mt-3 mx-auto bg-light">Search</button>
+            <!--View Cart/Pay button, show all menu items that is added to cart i.e. view database-->
+            <button class="btn mt-3 mx-auto bg-light">Checkout (Cart)</button>
+            <button class="btn mt-3 mx-auto bg-light showCart">Show Cart</button>
+            <button class="btn mt-3 mx-auto bg-light clearCart">Clear Cart</button>
+
+            <div class="section" id="myCart">
+              <h4 class="d-md-none mt-3" id="myCartHeader">My Cart</h4>
+              <!-- Ideal Output
+              <div class="card mt-3">
+                <img src="img/menudrink1.jpg">
+                <div class="card-body">
+                  <h5>Item Name</h5>
+                  <div class="mt-1">Quantity:</div>
+                  <input type="number" name="item1" id="item1" value="5" class="cartInput">
+                  <div class="mt-1">Remarks:</div>
+                  <textarea name="item1" id="item1" rows="2" class="cartInput"></textarea>
+                  <button class="mt-1">Remove</button>
+                </div>
+              </div>-->
+            </div>
+
+
+
+          </div>
+
+          <!--Item Col, 10 Grid-space wide-->
+          <div class="col-md-10">
+            <div class="container-fluid">
+              <h4 class="d-md-none">Menu</h4>
+              <!--1st row-->
+              <div class="row">
+                <div class="card col-md-3 text-center mt-3 mb-3">
+                  <!--if screen is wider than md (tablet/laptop), display title as h5, 
+                      else display as h4 -->
+                  <h5 class="card-title d-none d-md-block">Milo Dinosaur</h5>
+                  <h4 class="card-title d-md-none">Milo Dinosaur</h4>
+                  <img src="img/menudrink1.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item1'>
+                      <input type="text" class='qty' name="item1" value='0'>
+                      <input type="button" class="addQty" value="+" field='item1'>
+                    </div>
+                    <textarea name="item1" class="remarks mt-1 mb-1 d-block" id="remark1">Remarks</textarea>
+                    <button class="addToCart" field="item1">Add to Cart</button>
+                    <div class="price" field="item1"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Carrot Cake</h5>
+                  <h4 class="card-title d-md-none">Fried Carrot Cake</h4>
+                  <img src="img/menuappetiser1.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item2'>
+                      <input type="text" class='qty' name="item2" value='0'>
+                      <input type="button" class="addQty" value="+" field='item2'>
+                    </div>
+                    <textarea name="item2" class="remarks mt-1 mb-1 d-block" id="remark2">Remarks</textarea>
+                    <button class="addToCart" field="item2">Add to Cart</button>
+                    <div class="price" field="item2"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Fried Gyoza</h5>
+                  <h4 class="card-title d-md-none">Fried Gyoza</h4>
+                  <img src="img/menuappetiser2.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item3'>
+                      <input type="text" class='qty' name="item3" value='0'>
+                      <input type="button" class="addQty" value="+" field='item3'>
+                    </div>
+                    <textarea name="item3" class="remarks mt-1 mb-1 d-block" id="remark3">Remarks</textarea>
+                    <button class="addToCart" field="item3">Add to Cart</button>
+                    <div class="price" field="item3"></div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!--2nd row-->
+              <div class="row">
+                <div class="card col-md-3 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Fried Bee Hoon</h5>
+                  <h4 class="card-title d-md-none">Fried Bee Hoon</h4>
+                  <img src="img/menumain1.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item4'>
+                      <input type="text" class='qty' name="item4" value='0'>
+                      <input type="button" class="addQty" value="+" field='item4'>
+                    </div>
+                    <textarea name="item4" class="remarks mt-1 mb-1 d-block" id="remark4">Remarks</textarea>
+                    <button class="addToCart" field="item4">Add to Cart</button>
+                    <div class="price" field="item4"></div>
+                  </div>
+
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Japanese Udon</h5>
+                  <h4 class="card-title d-md-none">Japanese Udon</h4>
+                  <img src="img/menumain2.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item5'>
+                      <input type="text" class='qty' name="item5" value='0'>
+                      <input type="button" class="addQty" value="+" field='item5'>
+                    </div>
+                    <textarea name="item5" class="remarks mt-1 mb-1 d-block" id="remark5">Remarks</textarea>
+                    <button class="addToCart" field="item5">Add to Cart</button>
+                    <div class="price" field="item5"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Mee Goreng</h5>
+                  <h4 class="card-title d-md-none">Mee Goreng</h4>
+                  <img src="img/menumain3.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item6'>
+                      <input type="text" class='qty' name="item6" value='0'>
+                      <input type="button" class="addQty" value="+" field='item6'>
+                    </div>
+                    <textarea name="item6" class="remarks mt-1 mb-1 d-block" id="remark6">Remarks</textarea>
+                    <button class="addToCart" field="item6">Add to Cart</button>
+                    <div class="price" field="item6"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!--3rd row-->
+              <div class="row">
+                <div class="card col-md-3 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Fish and Chip</h5>
+                  <h4 class="card-title d-md-none">Fish and Chip</h4>
+                  <img src="img/menumain4.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item7'>
+                      <input type="text" class='qty' name="item7" value='0'>
+                      <input type="button" class="addQty" value="+" field='item7'>
+                    </div>
+                    <textarea name="item7" class="remarks mt-1 mb-1 d-block" id="remark7">Remarks</textarea>
+                    <button class="addToCart" field="item7">Add to Cart</button>
+                    <div class="price" field="item7"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Sesame Paste</h5>
+                  <h4 class="card-title d-md-none">Sesame Paste with Rice Balls</h4>
+                  <img src="img/menudessert1.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item8'>
+                      <input type="text" class='qty' name="item8" value='0'>
+                      <input type="button" class="addQty" value="+" field='item8'>
+                    </div>
+                    <textarea name="item8" class="remarks mt-1 mb-1 d-block" id="remark8">Remarks</textarea>
+                    <button class="addToCart" field="item8">Add to Cart</button>
+                    <div class="price" field="item8"></div>
+                  </div>
+                </div>
+
+                <div class="card col-md-3 offset-md-1 text-center mt-3 mb-3">
+                  <h5 class="card-title d-none d-md-block">Ginko Barley</h5>
+                  <h4 class="card-title d-md-none">Ginko Barley</h4>
+                  <img src="img/menudessert2.jpg" alt="Dine In" class="card-img-top mt-1">
+                  <div class="card-body mx-auto">
+                    <div class="input-group d-block">
+                      <input type="button" class="minusQty" value="-" field='item9'>
+                      <input type="text" class='qty' name="item9" value='0'>
+                      <input type="button" class="addQty" value="+" field='item9'>
+                    </div>
+                    <textarea name="item9" class="remarks mt-1 mb-1 d-block" id="remark9">Remarks</textarea>
+                    <button class="addToCart" field="item9">Add to Cart</button>
+                    <div class="price" field="item9"></div>
+                  </div>
+                </div>
+              </div>
+              <!--3rd row-->
+            </div>
+            <!--container-fluid-->
+          </div>
+          <!--column-->
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--Footer with 3 columns, -->
+  <footer class="footer bg-dark">
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <!--Col 1: Name and address-->
+        <div class="col-md-4 justify-content-start">
+          <h4>Local Delight Cafe</h4>
+          <p>
+            Headquarter:<br>
+            10 Orchard Drive<br>
+            The Hive, #02-05<br>
+            Singapore 123456 <br>
+          </p>
+        </div>
+
+        <!--Col 2:Social Media-->
+        <div class="col-md-4 justify-content-start mb-3">
+          <h4>Follow us on:</h4>
+          <img src="img/facebook.jpg" alt="Facebook">
+          <img src="img/instagram.png" alt="Instagram">
+          <img src="img/twitter.jpg" alt="Twitter">
+          <img src="img/youtube.jpg" alt="Youtube">
+          <img src="img/rss.jpg" alt="RSS"> <br>
+        </div>
+
+        <!--Col 3: Other links-->
+        <div class="col-md-4 justify-content-center mb-3">
+          <h4>Other links:</h4>
+          <ul>
+            <li><a href="dinein.html" id="footerLink">Store Finder</a></li>
+            <li><a href="#" id="footerLink">Careers</a></li>
+            <li><a href="#" id="footerLink">Terms and Conditions</a></li>
+            <li><a href="#" id="footerLink">Privacy Policy</a></li>
+            <li><a href="#" id="footerLink">Press Release</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

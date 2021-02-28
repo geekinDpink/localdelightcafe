@@ -1,0 +1,17 @@
+
+body {
+    background-color: rgb(230, 228, 228);
+}
+
+body{
+    width: 100%;
+}
+
+header, .section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer, #footerLink{
+    color:white;
+}

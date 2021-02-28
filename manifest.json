@@ -1,0 +1,21 @@
+{
+  "name": "localdelightcafe",
+  "short_name": "LDCafe",
+  "start_url": "/index.html",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/homeicon512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose":"any maskable"
+    },
+    {
+      "src": "img/homeicon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

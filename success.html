@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="#2196f3">
+
+    <!--Bootstrap Version 4.5.3-->
+    <!--CSS for Bootstrap, follow by Overlay (all pages) and lastly, for specific page (if any)-->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/overlay.css">
+    <!--PWA-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./img/homeicon192.png">
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src='./bootstrap/js/bootstrap.min.js'></script>
+    <script src='./bootstrap/js/app.js'></script>
+
+
+    <title>Local Delight Cafe</title>
+</head>
+
+<body>
+    <!--Horizontal Nav Bar-->
+    <!--Require navbar-light-->
+    <!--Cafe name will be 2-liner Tablet/PC view and single line in mobile device-->
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <h3 class="navbar-brand">Local <br class="d-none d-md-inline">Delight Cafe</h3>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarContent"
+            aria-controls="navBarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!--navbar-light required because for CSS selector for bg imag, 
+              the navbar-toggler-icon is a descendant of navbar-light-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navBarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="delivery.html">Menu/Delivery</a></li>
+                <li class="nav-item"><a class="nav-link" href="dinein.html">Reservation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
+            </ul>
+
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header class="container-fluid">
+        <img src="img/pagebanner.jpg" id="top_header" class="mx-auto d-block img-fluid">
+        </img>
+    </header>
+
+    <div class="container">
+
+        <!--Dine-in or Delivery; made up of two cards-->
+        <div class="section" id="welcome">
+            <h2>Your booking is successful</h2>
+        </div>
+
+
+
+    </div>
+
+    <!--Footer with 3 columns, -->
+    <footer class="footer bg-dark">
+        <div class="container mt-3 mb-3">
+            <div class="row">
+                <!--Col 1: Name and address-->
+                <div class="col-md-4 justify-content-start">
+                    <h4>Local Delight Cafe</h4>
+                    <p>
+                        Headquarter:<br>
+                        10 Orchard Drive<br>
+                        The Hive, #02-05<br>
+                        Singapore 123456 <br>
+                    </p>
+                </div>
+
+                <!--Col 2:Social Media-->
+                <div class="col-md-4 justify-content-start mb-3">
+                    <h4>Follow us on:</h4>
+                    <img src="img/facebook.jpg" alt="Facebook">
+                    <img src="img/instagram.png" alt="Instagram">
+                    <img src="img/twitter.jpg" alt="Twitter">
+                    <img src="img/youtube.jpg" alt="Youtube">
+                    <img src="img/rss.jpg" alt="RSS">
+                </div>
+
+                <!--Col 3: Other links-->
+                <div class="col-md-4 justify-content-center mb-3">
+                    <h4>Other links:</h4>
+                    <ul>
+                        <li><a href="#" id="footerLink">Store Finder</a></li>
+                        <li><a href="#" id="footerLink">Careers</a></li>
+                        <li><a href="#" id="footerLink">Terms and Conditions</a></li>
+                        <li><a href="#" id="footerLink">Privacy Policy</a></li>
+                        <li><a href="#" id="footerLink">Press Release</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

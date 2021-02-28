@@ -1,0 +1,47 @@
+[
+  {
+    "id": "item1",
+    "name": "Milo Dinosaur",
+    "price": "$2.00"
+  },
+  {
+    "id": "item2",
+    "name": "Carrot Cake",
+    "price": "$3.00"
+  },
+  {
+    "id": "item3",
+    "name": "Fried Gyoza",
+    "price": "$3.50"
+  },
+  {
+    "id": "item4",
+    "name": "Fried Bee Hoon",
+    "price": "$5.00"
+  },
+  {
+    "id": "item5",
+    "name": "Japanese Udon",
+    "price": "$6.00"
+  },
+  {
+    "id": "item6",
+    "name": "Mee Goreng",
+    "price": "$3.50"
+  },
+  {
+    "id": "item7",
+    "name": "Fish and Chip",
+    "price": "$7.00"
+  },
+  {
+    "id": "item8",
+    "name": "Sesame Paste",
+    "price": "$3.50"
+  },
+  {
+    "id": "item9",
+    "name": "Ginko Barley",
+    "price": "$2.90"
+  }
+]
